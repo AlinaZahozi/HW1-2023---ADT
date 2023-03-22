@@ -1,9 +1,0 @@
-{
-    "git.autofetch": true,
-    "git.autofetchPeriod": 365,
-    "git.autoStash": true,
-    "git.branchProtectionPrompt": "alwaysCommit",
-    "git.enableCommitSigning": true,
-    "git.postCommitCommand": "push",
-    "search.useGlobalIgnoreFiles": true
-}
