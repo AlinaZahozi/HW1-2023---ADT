@@ -45,11 +45,8 @@ Result SetAdptArrayAt(PAdptArray array, int index, PElement m){
         if((array->arr)[index] != NULL){
             array->delete_element((array->arr)[index]);
         }
-        //(array->arr)[index] = array->copy_element(m);
-        //return SUCCESS;
-        PElement type = array->copy_element(m);
-        if(type != NULL){
-            (array->arr)[index] = type;
+        (array->arr)[index] = array->copy_element(m);
+        if((array->arr)[index] != NULL){
             return SUCCESS;
         }
     }
@@ -61,9 +58,8 @@ Result SetAdptArrayAt(PAdptArray array, int index, PElement m){
         free(array->arr);
         array->arr = new_arr;
 
-        PElement type = array->copy_element(m);
-        if(type != NULL){
-            (array->arr)[index] = type;
+        (array->arr)[index] = array->copy_element(m);
+        if((array->arr)[index] != NULL){
             return SUCCESS;
         }
     }
