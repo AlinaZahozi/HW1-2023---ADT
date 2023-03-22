@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "AdptArray.h"
 
 typedef struct AdptArray_{
@@ -54,7 +55,7 @@ Result SetAdptArrayAt(PAdptArray array, int index, PElement m){
     }
     else if (index >= arr_size){
 
-        Pelement* new_arr = (PElement*)calloc((index+1),sizeof(PElement));
+        PElement* new_arr = (PElement*)calloc((index+1),sizeof(PElement));
         if(!new_arr) return FAIL;
         memcpy(new_arr, array->arr, (arr_size)*sizeof(PElement));
         free(array->arr);
@@ -73,7 +74,7 @@ PElement GetAdptArrayAt(PAdptArray array, int index){
     int arr_size = GetAdptArraySize(array);
     if(!array || arr_size == 0) return NULL;
     if((0 <= index) && (index < arr_size)){
-       PElement type = array->copy_element(array->PElement[index]);
+       PElement type = array->copy_element(array->arr[index]);
        if(!type) return NULL;
        return type;
     }
