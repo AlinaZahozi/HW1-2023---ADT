@@ -8,7 +8,7 @@ This repository contains an implementation of an adaptive array in C. The adapti
 
 To use this implementation, simply clone the repository to your local machine:
 
-	git clone https://github.com/
+	git clone https://github.com/AlinaZahozi/HW1-2023---ADT
 	
 
 **Usage:**
